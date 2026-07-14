@@ -9,6 +9,8 @@
 * 3 - Fazer um deposito
 * 4 - Finalizar o programa (sair)
 
+* sinta-se livre para me dar dicas de como melhorar :)
+
   ----------------
 
 ## V1
