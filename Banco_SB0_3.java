@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Banco_SB {
+public class Banco_SB0_3 {
 
     public static void esperar() throws InterruptedException{
         Thread.sleep(2000);
@@ -321,7 +321,7 @@ public class Banco_SB {
                                 esperar();
                                 espacamento();
                                 condition = false;
-                                condition1 = false;
+                                condition1
                             }
                         }
                     }
