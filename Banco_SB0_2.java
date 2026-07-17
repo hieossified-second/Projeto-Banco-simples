@@ -156,33 +156,32 @@ public class Banco_SB0_2 {
                                         loop = false;
                                     }
                                     if (parc == 3){
-                                        System.out.println("Voce escolher pagar em " + 2 + " parcelas");
-                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 2);
+                                        System.out.println("Voce escolher pagar em " + 3 + " parcelas");
+                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 3);
                                         System.out.println("--------------------");
                                         esperar();
                                         espacamento();
                                         loop = false;
                                     }
                                     if (parc == 4){
-                                        System.out.println("Voce escolher pagar em " + 2 + " parcelas");
-                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 2);
+                                        System.out.println("Voce escolher pagar em " + 4 + " parcelas");
+                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 4);
                                         System.out.println("--------------------");
                                         esperar();
                                         espacamento();
                                         loop = false;
                                     }
                                     if (parc == 5){
-                                        System.out.println("Voce escolher pagar em " + 2 + " parcelas");
-                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 2);
+                                        System.out.println("Voce escolher pagar em " + 5 + " parcelas");
+                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 5);
                                         System.out.println("--------------------");
                                         esperar();
                                         espacamento();
                                         loop = false;
                                     }
                                     if (parc == 6){
-                                        System.out.println("Voce escolher pagar em " + 2 + " parcelas");
-                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 2);
-                                        System.out.println("--------------------");
+                                        System.out.println("Voce escolher pagar em " + 6 + " parcelas");
+                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 6);
                                         esperar();
                                         espacamento();
                                         loop = false;
