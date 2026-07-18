@@ -12,31 +12,31 @@ public class Banco_SB {
     public static void empres() throws InterruptedException{
                     System.out.println("--------------------");
                     System.out.println("Digite o valor desejado");
-                    System.out.println("Trabalhamos com juros de 8%");
+                    System.out.println("Trabalhamos com juros de 4%");
                     System.out.println("--------------------");
                     verificar();
 
                     double money = sc.nextDouble();
-                    double juross = money * 0.08;
+                    double juross = money * 0.04;
 
                     System.out.println("Voce fez um emprestimo de R$: " + money);
-                    System.out.println("Total a Pagar: " + money + " + " + juross);
+                    System.out.printf("Total a Pagar: %.2f + %.2f%n", money, juross);
 
                             saldo[0] = saldo[0] + money;
-                            double[] saldoj = new double[1];
-                            saldoj[0] = saldo[0] + juross;
+                            double[] jurosap = new double[1];
+                            jurosap[0] = money + juross;
 
                                 boolean loop = true;
 
                                 while(loop){
                                     System.out.println("--------------------");
                                     System.out.println("Escolha suas Parcelas: ");
-                                    System.out.println("1x " + saldoj[0]);
-                                    System.out.println("2x " + saldoj[0] / 2);
-                                    System.out.println("3x " + saldoj[0] / 3);
-                                    System.out.println("4x " + saldoj[0] / 4);
-                                    System.out.println("5x " + saldoj[0] / 5);
-                                    System.out.println("6x " + saldoj[0] / 6);
+                                    System.out.printf("1 - 1x: %.2f%n", jurosap[0]);
+                                    System.out.printf("2 - 2x: %.2f%n", jurosap[0] / 2);
+                                    System.out.printf("3 - 3x: %.2f%n", jurosap[0] / 3);
+                                    System.out.printf("4 - 4x: %.2f%n", jurosap[0] / 4);
+                                    System.out.printf("5 - 5x: %.2f%n", jurosap[0] / 5);
+                                    System.out.printf("6 - 6x: %.2f%n", jurosap[0] / 6);
                                     System.out.println("Caso deseje cancelar essa acão digite 0");
                                     System.out.println("--------------------");
 
@@ -45,52 +45,52 @@ public class Banco_SB {
                                     
                                     if (parc == 1){
                                         System.out.println("Voce escolher pagar em " + 1 + " parcelas");
-                                        System.out.println("Valor a pagar no proximo mes" + saldoj[0]);
+                                        System.out.printf("Valor a pagar: %.2f%n", jurosap[0]);
                                         System.out.println("--------------------");
                                         esperar();
                                         espacamento();
                                         loop = false;
                                     }
-                                    if (parc == 2){
+                                    else if (parc == 2){
                                         System.out.println("Voce escolher pagar em " + 2 + " parcelas");
-                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 2);
+                                        System.out.printf("Valor a pagar mensalmente: %.2f%n ", jurosap[0] / 2);
                                         System.out.println("--------------------");
                                         esperar();
                                         espacamento();
                                         loop = false;
                                     }
-                                    if (parc == 3){
+                                    else if (parc == 3){
                                         System.out.println("Voce escolher pagar em " + 3 + " parcelas");
-                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 3);
+                                        System.out.printf("Valor a pagar mensalmente: %.2f%n", jurosap[0] / 3);
                                         System.out.println("--------------------");
                                         esperar();
                                         espacamento();
                                         loop = false;
                                     }
-                                    if (parc == 4){
+                                    else if (parc == 4){
                                         System.out.println("Voce escolher pagar em " + 4 + " parcelas");
-                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 4);
+                                        System.out.printf("Valor a pagar mensalmente: %.2f%n", jurosap[0] / 4);
                                         System.out.println("--------------------");
                                         esperar();
                                         espacamento();
                                         loop = false;
                                     }
-                                    if (parc == 5){
+                                    else if (parc == 5){
                                         System.out.println("Voce escolher pagar em " + 5 + " parcelas");
-                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 5);
+                                        System.out.printf("Valor a pagar mensalmente: %.2f%n", jurosap[0] / 5);
                                         System.out.println("--------------------");
                                         esperar();
                                         espacamento();
                                         loop = false;
                                     }
-                                    if (parc == 6){
+                                    else if (parc == 6){
                                         System.out.println("Voce escolher pagar em " + 6 + " parcelas");
-                                        System.out.println("Valor a pagar mensalmente " + saldoj[0] / 6);
+                                        System.out.printf("Valor a pagar mensalmente: %.2f%n", jurosap[0] / 6);
                                         esperar();
                                         espacamento();
                                         loop = false;
                                     }
-                                    if (parc == 0){
+                                    else if (parc == 0){
                                         System.out.println("Voce cancelou essa acão retornando ao menu");
                                         System.out.println("--------------------");
                                         saldo[0] = saldo[0] - money;
@@ -98,14 +98,14 @@ public class Banco_SB {
                                         espacamento();
                                         loop = false;
                                     }
-                                    if (parc > 6){
+                                    else if (parc > 6){
                                         System.out.println("--------------------");
                                         System.out.println("Digite apenas o valor das parcelas disponiveis");
                                         esperar();
                                         espacamento();
                                         continue;
                                     }
-                                    if (parc < 0){
+                                    else if (parc < 0){
                                         System.out.println("--------------------");
                                         System.out.println("Digite apenas o valor das parcelas disponiveis");
                                         esperar();
@@ -116,9 +116,10 @@ public class Banco_SB {
     }
 
     public static void verificar() throws InterruptedException {
-        while (!sc.hasNextInt()){
+        while (!sc.hasNextDouble()){
                 System.out.println("--------------------");
                 System.out.println("Digite Apenas numeros!");
+                System.out.println("Por favor faca a acao novamente");
                 System.out.println("--------------------");
                 sc.next();
                 esperar();
@@ -183,16 +184,21 @@ public class Banco_SB {
                     espacamento();
                     System.out.println("--------------------");
                     System.out.println("Saldo atual");
-                    System.out.println(saldo[0]);
+                    System.out.printf("%.2f%n",saldo[0]);
                     System.out.println("--------------------");
                     esperar();
-
+                
                     if(saldo[0] == 0){
                         System.out.println("--------------------");
-                        System.out.println("Nós percebemos que seu atual saldo esta zerado");
-                        System.out.println("O System Brasil usa hoje a menor taxa de emprestimos");
+                        System.out.println("Percebemos que seu saldo esta zerado");
+                        System.out.println("O System Brasil tem a menor taxa de emprestimos");
                         System.out.println("Deseja fazer um emprestimo?");
                         System.out.println("--------------------");
+                        System.out.println("1 - Sim");
+                        System.out.println("2 - Não");
+                        System.out.println("Digite qualquer outro numero para sair para o menu");
+                        System.out.println("--------------------");
+
 
                         verificar();
                         int emps_n = sc.nextInt();
@@ -210,28 +216,31 @@ public class Banco_SB {
                             espacamento();
                             continue;
                         }
+
+                        espacamento();
+
                     }
                     break;
                 case 2: 
                     System.out.println("--------------------");
                     System.out.println("Quanto deseja retirar?");
-                    System.out.println("Seu saldo atual é: " + saldo[0]);
+                    System.out.printf("Seu saldo atual é: %.2f%n", saldo[0]);
 
                     verificar();
 
-                    int retirou = sc.nextInt();
+                    double retirou = sc.nextDouble();
 
                     if (saldo[0] > retirou){
                         saldo[0] = saldo[0] - retirou;
                         System.out.println("--------------------");
-                        System.out.println("Voce retirou "+ retirou + " Agora seu saldo é " + saldo[0]);
+                        System.out.printf("Voce retirou "+ retirou + " Agora seu saldo é: %.2f%n", saldo[0]);
                         System.out.println("--------------------");
                         esperar();
                         espacamento();
                     }else if(retirou == saldo[0]){
                         saldo[0] = 0;
                         System.out.println("--------------------");
-                        System.out.println("Voce retirou "+ retirou + " Agora seu saldo é " + saldo[0]);
+                        System.out.printf("Voce retirou "+ retirou + " Agora seu saldo é: %.2f%n", saldo[0]);
                         System.out.println("--------------------");
                         esperar();
                         espacamento();
@@ -240,7 +249,7 @@ public class Banco_SB {
                     if (saldo[0] < retirou){
                         System.out.println("--------------------");
                         System.out.println("Quantidade desejada indisponivel (saldo insuficiente!)");
-                        System.out.println("Seu saldo é de: " + saldo[0]);
+                        System.out.printf("Seu saldo é de: %.2f%n", saldo[0]);
                         System.out.println("--------------------");
                         espacamento();
                         System.out.println("--------------------");
@@ -262,13 +271,13 @@ public class Banco_SB {
 
                    verificar();
 
-                    int deposito1 = sc.nextInt();
+                    double deposito1 = sc.nextDouble();
 
                     System.out.println("--------------------");
                     System.out.println("Voce depositou " + deposito1);
                     saldo[0] += deposito1;
 
-                    System.out.println("Saldo atual é de: " + saldo[0]);
+                    System.out.printf("Saldo atual é de: %.2f%n", saldo[0]);
                     System.out.println("--------------------");
                     esperar();
                     espacamento();
@@ -311,9 +320,12 @@ public class Banco_SB {
                                 continue;
                             }
                             if (transf <= saldo[0]){
+                                double transfi = saldo[0] - transf;
+                                saldo[0] = transfi;
+
                                 System.out.println("--------------------");
                                 System.out.println("Sua transferencia foi concluida");
-                                System.out.println("Saldo atual: " + saldo[0]);
+                                System.out.printf("Saldo atual: %.2f%n", saldo[0]);
                                 System.out.println("--------------------");
                                 System.out.println(" ");
                                 System.out.println("Voltando ao menu...");

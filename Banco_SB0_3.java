@@ -321,7 +321,7 @@ public class Banco_SB0_3 {
                                 esperar();
                                 espacamento();
                                 condition = false;
-                                condition1
+                                condition1 = false;
                             }
                         }
                     }
